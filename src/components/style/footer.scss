@@ -1,0 +1,56 @@
+@import './_global';
+
+*{
+    @include global;
+}
+footer{
+    padding: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid green;
+
+    & .social-media-links{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 2rem;
+
+        & li{
+            list-style: none;
+            margin: 0rem 1.2rem;
+
+            & a{
+                color: #000;
+                cursor: pointer;
+            }
+        }
+    }
+
+    & .terms-and-conditions{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 2rem;
+        font-weight: 600;
+
+        & p{
+            margin: 0rem 1.6rem;
+            font-size: 1rem;
+        }
+    }
+    & .copyright{
+        color: #6B7280;
+    }
+    @media (max-width: 600px){
+        .terms-and-conditions{
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+            flex-direction: column;
+
+            & p{
+                margin: 0.5rem 1.4rem;
+                font-size: 1rem;
+            }
+        }
+    }
+}

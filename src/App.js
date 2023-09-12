@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import './components/style/index.css';
+
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
+import Footer from './components/pages/footer';
+import Home from './components/pages/home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+
+        <div className="App">
+          <Routes>
+
+            <Route path="/" element={< Home />} />
+          </Routes>
+          <Footer
+            copyright="&copy; 2021 MovieBox by Adriana Eka Prayudha"
+        />
+        </div>
+
+      </Router>
+
+      </>
   );
 }
 
