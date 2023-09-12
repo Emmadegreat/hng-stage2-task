@@ -33,18 +33,22 @@ const Singlepage = () => {
 
     return (
         <>
-            {movieDetail ?(
-
-                    <section className='single-movie' key={movieDetail.id}>
-                        <img src={`https://image.tmdb.org/t/p/w500/${movieDetail.poster_path}`} data-testid="movie-poster" alt={movieDetail.title} />
-                        <div>
-                            <h5 data-testid="movie-title">Title:{ movieDetail.title}</h5>
-                            <p data-testid="movie-release-date">Release date:{movieDetail.release_date}</p>
-                            <p>Description: {movieDetail.overview}</p> <br />
-                        </div>
-                    </section>
+            <section>
+                <div>
+                    <h1>Movie detail page</h1>
+                </div>
+                {movieDetail ?(
+                <section className='single-movie' key={movieDetail.id}>
+                    <img src={`https://image.tmdb.org/t/p/w500/${movieDetail.poster_path}`} data-testid="movie-poster" alt={movieDetail.title} />
+                    <div>
+                        <h5 data-testid="movie-title">Title:{ movieDetail.title}</h5>
+                        <p data-testid="movie-release-date">Release date:{movieDetail.release_date}</p>
+                        <p>Description: {movieDetail.overview}</p> <br />
+                    </div>
+                </section>
 
             ):(<p>hello</p>)}
+            </section>
 
         </>
     )

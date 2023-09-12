@@ -21,6 +21,10 @@ const Home = () => {
     getMovie();*/
 
     const [movieList, setMovieList] = useState({ results: [] });
+    const [search, setSearch] = useState("");
+    const [click, setClick] = useState();
+    const Open = () => setClick(!click);
+    const Close = () => setClick(false);
 
     const url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=7248317da58d3e1b7fe495fc4dd8aaf1';
 
@@ -29,7 +33,7 @@ const Home = () => {
         try {
             const resp = await axios.get(url);
             setMovieList(resp.data)
-            //console.log(resp.data.results);
+            console.log(resp.data.results);
         } catch (error) {
             console.log(error);
         }
@@ -38,15 +42,14 @@ const Home = () => {
     useEffect(() => {
         FetchData()
     }, [])
-    console.log(movieList.results);
 
+    const searchMovie = (movieList.results).filter((item) => {
+        return item.title.toLowerCase().includes(search.toLowerCase())
+    })
 
-    const [click, setClick] = useState(false);
-    //const [search, setSearch] = useState('');
-    //const [selectCategory, setSelectCategory] = useState('all');
-
-    const Open = () => setClick(!click);
-    const Close = () => setClick(false);
+    const onChangeHandler = (e) => {
+        setSearch(e.target.value);
+    }
 
     return (
         <>
@@ -56,8 +59,14 @@ const Home = () => {
                         <NavLink to="/"><img src={logo} alt="MovieBox" /></NavLink>
                         <p>MovieBox</p>
                     </div>
-                    <form action="">
-                        <input type="text" placeholder='What do you want to watch?'/>
+                    <form>
+                        <input
+                            type="search"
+                            name='search'
+                            placeholder='What do you want to watch?'
+                            value={search}
+                            onChange={onChangeHandler}
+                        />
                     </form>
                     <div className='login-wrapper'>
                         <span>Login</span>
@@ -95,7 +104,7 @@ const Home = () => {
                 </div>
                 <section className="card-wrapper">
                     {
-                        (movieList.results).map((movie) => {
+                        (searchMovie).map((movie) => {
                             return (
                                 <div className='card' data-testid="movie-card" key={movie.id}>
                                     <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} data-testid="movie-poster" alt={movie.title} />
