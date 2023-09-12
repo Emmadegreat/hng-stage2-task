@@ -15,7 +15,7 @@ function App() {
           <Routes>
 
             <Route path="/" element={< Home />} />
-            <Route path="/movies/:id" element={<Singlepage />} />
+            <Route path="/movie/:id" element={<Singlepage />} />
           </Routes>
           <Footer
             copyright="&copy; 2021 MovieBox by Adriana Eka Prayudha"

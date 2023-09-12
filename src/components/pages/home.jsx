@@ -22,7 +22,7 @@ const Home = () => {
 
     const [movieList, setMovieList] = useState({ results: [] });
 
-    const url = 'https://api.themoviedb.org/3/movie/popular?api_key=7248317da58d3e1b7fe495fc4dd8aaf1';
+    const url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=7248317da58d3e1b7fe495fc4dd8aaf1';
 
     const FetchData = async () => {
 
@@ -102,7 +102,7 @@ const Home = () => {
                                     <div className='movie-detail'>
                                         <h5 data-testid="movie-title">Title:{ movie.title}</h5>
                                         <p data-testid="movie-release-date">Release date:{movie.release_date}</p>
-                                        <Link to={`/movies/${movie.id}`} id='view'>View</Link>
+                                        <Link to={`/movie/${movie.id}`} id='view'>View</Link>
                                     </div>
 
 
