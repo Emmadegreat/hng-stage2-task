@@ -20,9 +20,9 @@ const Home = () => {
     }
     getMovie();*/
 
-    const [movieList, setMovieList] = useState([]);
+    const [movieList, setMovieList] = useState({ results: [] });
 
-    const url = 'https://api.themoviedb.org/3/discover/movie?api_key=7248317da58d3e1b7fe495fc4dd8aaf1';
+    const url = 'https://api.themoviedb.org/3/movie/popular?api_key=7248317da58d3e1b7fe495fc4dd8aaf1';
 
     const FetchData = async () => {
 
@@ -99,14 +99,17 @@ const Home = () => {
                             return (
                                 <div className='card' data-testid="movie-card" key={movie.id}>
                                     <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} data-testid="movie-poster" alt={movie.title} />
-                                    <div className='movie details'>
-                                        <h3 data-testid="movie-title">title:{ movie.title}</h3>
-                                        <p data-testid="movie-release-date">release date:{ movie.release_date}</p>
+                                    <div className='movie-detail'>
+                                        <h5 data-testid="movie-title">Title:{ movie.title}</h5>
+                                        <p data-testid="movie-release-date">Release date:{movie.release_date}</p>
+                                        <Link to={`/movie/${movie.id}`} id='view'>View</Link>
                                     </div>
+
 
                                 </div>
                             )
                         })
+
                     }
 
                 </section>
