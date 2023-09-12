@@ -1,9 +1,9 @@
 import '../style/home.css';
 
-import { FaBars, FaChevronRight, FaFaceBook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
 import React,{useEffect, useState} from 'react'
 
+import {FaChevronRight} from 'react-icons/fa';
 import apple from '../images/apple.png'
 import axios from 'axios'
 import imdb from '../images/imbd-icon.png'
@@ -102,7 +102,7 @@ const Home = () => {
                                     <div className='movie-detail'>
                                         <h5 data-testid="movie-title">Title:{ movie.title}</h5>
                                         <p data-testid="movie-release-date">Release date:{movie.release_date}</p>
-                                        <Link to={`/movie/${movie.id}`} id='view'>View</Link>
+                                        <Link to={`/movies/${movie.id}`} id='view'>View</Link>
                                     </div>
 
 

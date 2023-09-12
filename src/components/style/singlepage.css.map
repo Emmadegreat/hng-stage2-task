@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"singlepage.css"}
+{"version":3,"sources":["singlepage.scss","_global.scss","singlepage.css"],"names":[],"mappings":"AAEA;ECDI,UAAA;EACA,SAAA;EACA,sBAAA;EACA,+BAAA;ACCJ;;AFAA;EACI,aAAA;AEGJ","file":"singlepage.css"}

@@ -1,0 +1,8 @@
+@import './global';
+
+*{
+    @include global;
+}
+.single-movie{
+    padding: 4rem;
+}

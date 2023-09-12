@@ -1,1 +1,10 @@
-/*# sourceMappingURL=singlepage.css.map */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto", sans-serif;
+}
+
+.single-movie {
+  padding: 4rem;
+}/*# sourceMappingURL=singlepage.css.map */
