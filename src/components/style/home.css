@@ -111,6 +111,7 @@
 main {
   border: 1px solid red;
   padding: 2rem 4rem;
+  margin-bottom: 3rem;
 }
 main .featured-section {
   display: flex;

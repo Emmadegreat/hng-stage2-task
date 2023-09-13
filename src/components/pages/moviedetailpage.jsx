@@ -1,4 +1,4 @@
-import '../style/singlepage.css';
+import '../style/moviedetailpage.css'
 
 import React, {useEffect, useState} from 'react'
 

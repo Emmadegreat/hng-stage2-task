@@ -29,7 +29,7 @@ const Footer = (props) => {
                     <p>Press Room</p>
                 </div>
                 <div className='copyright'>
-                    <p>{ props.copyright}</p>
+                    <p id='copyright'>{ props.copyright}</p>
                 </div>
             </footer>
 
