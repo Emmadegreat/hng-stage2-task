@@ -4,7 +4,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import Footer from './components/pages/footer';
 import Home from './components/pages/home';
-import Singlepage from './components/pages/singlepage';
+import MovieDetailPage from './components/pages/moviedetailpage';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
           <Routes>
 
             <Route path="/" element={< Home />} />
-            <Route path="/movie/:id" element={<Singlepage />} />
+            <Route path="/movie/:id" element={<MovieDetailPage />} />
           </Routes>
           <hr style={{color:"#1d3344"}}/>
           <Footer

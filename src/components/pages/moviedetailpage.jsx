@@ -14,7 +14,7 @@ import movie_show_icon from '../images/Movie Projector.png'
 import tv_icon from '../images/TV Show.png'
 import { useParams } from 'react-router-dom';
 
-const Singlepage = () => {
+const MovieDetailPage = () => {
 
     const [movieDetail, setMovieDetail] = useState(null);
     const apikey = '7248317da58d3e1b7fe495fc4dd8aaf1';
@@ -73,7 +73,7 @@ const Singlepage = () => {
 
                 <section className='part3'>
                    {movieDetail ?(
-                    <div className='single-movie' key={movieDetail.id}>
+                    <div className='movie-details' key={movieDetail.id}>
                         <h4 data-testid="movie-title">Title: { movieDetail.title} . </h4>
                         <b data-testid="movie-release-date">Release date: {dateString(movieDetail.release_date)} . </b>{/*utc* runtime in minutes*/}
                         <b data-testid="movie runtime">Runtime: {movieDetail.runtime} minutes</b><br />
@@ -82,7 +82,7 @@ const Singlepage = () => {
 
                     ) : (<p>...Loading</p>)}
                     <div id='even'>
-                        <p><FaStar style={{color:"yellow"}}/>8.5|350k</p>
+                        <p><FaStar style={{color:"yellow"}}/>&nbsp;8.5|350k</p>
                         <button>See Showtimes</button>
                         <button style={{backgroundColor:"#BE123C1A", color:"#000"}}>More watch options</button>
                         <img src={ img37} alt="group-movie" />
@@ -95,4 +95,4 @@ const Singlepage = () => {
     )
 }
 
-export default Singlepage
+export default MovieDetailPage

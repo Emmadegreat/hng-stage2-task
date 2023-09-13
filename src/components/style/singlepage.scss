@@ -16,12 +16,14 @@
     gap: 2rem;
 
     & .part1{
-        border: 1px solid red;
+        border: 1px solid #BE123C;
         grid-area: part1;
         padding: 1.5rem 1rem 1.5rem 3rem;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
 
         & .logo-wrapper{
             display: flex;
@@ -99,7 +101,6 @@
         }
     }
     & .part2{
-        border: 1px solid green;
         grid-area: part2;
         background: url('../images/hero-imgage1.png') no-repeat center center / cover;
         object-fit: center;
@@ -109,7 +110,6 @@
         width: 100%;
     }
     & .part3{
-        border: 1px solid yellow;
         grid-area: part3;
         display: flex;
         justify-content: space-between;
@@ -120,6 +120,20 @@
             display: inherit;
             flex-direction: column;
         }
+
+        & .movie-details{
+
+            h4, b{
+                line-height: 1.4;
+                color: #4c5053;
+            }
+
+            & p{
+                line-height: 1.6;
+                margin-top: 1rem;
+            }
+        }
+
         & #even{
             padding-left: 1.5rem;
             text-align: right;
@@ -138,16 +152,26 @@
             }
         }
 
-        & .single-movie{
+    }
+    @media (max-width:950px){
+        display: grid;
+        grid-template-rows:  0.2fr 0.2fr 0.2fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "part1"
+        "part2"
+        "part3"
+    ;
+        & .part3{
+            flex-direction: column;
+            padding-bottom: 2rem;
 
-            h4, b{
-                line-height: 1.6;
-                color: #4c5053;
+            & .movie-details{
+                padding: 1rem 1.5rem
             }
 
-            & p{
-                line-height: 1.6;
-                margin-top: 1rem;
+            & #even img{
+                width: 100%;
             }
         }
     }
