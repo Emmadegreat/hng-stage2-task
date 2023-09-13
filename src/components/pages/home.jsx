@@ -22,7 +22,7 @@ const Home = () => {
 
     const [movieList, setMovieList] = useState({ results: [] });
     const [search, setSearch] = useState("");
-    const [click, setClick] = useState();
+    const [click, setClick] = useState(false);
     const Open = () => setClick(!click);
     const Close = () => setClick(false);
 
@@ -60,7 +60,7 @@ const Home = () => {
             <section className='hero-section'>
                 <header>
                     <div className='logo-wrapper'>
-                        <NavLink to="/"><img src={logo} alt="MovieBox" /></NavLink>
+                        <Link to="/"><img src={logo} alt="MovieBox" /></Link>
                         <p>MovieBox</p>
                     </div>
                     <form>
@@ -101,10 +101,10 @@ const Home = () => {
                 </div>
             </section>
 
-            <main className='main'>
+            <main className={click ? 'main active': 'main'}>
                 <div className='featured-section'>
-                    <h3>Featured Movie</h3>
-                    <button>See more <FaChevronRight id='chevron-right-icon'/></button>
+                    <h3>Top Rated Movie</h3>
+                    <button style={{padding:"0.2rem"}}>See more <FaChevronRight id='chevron-right-icon'/></button>
                 </div>
                 <section className="card-wrapper">
                     {

@@ -19,7 +19,6 @@
   align-items: center;
   text-align: center;
   padding: 0.5rem 4rem;
-  color: #fff;
   height: 60px;
 }
 .hero-section header .logo-wrapper {
@@ -30,16 +29,19 @@
   width: 50px;
   height: 50px;
   margin-right: 1rem;
+  border-radius: 10%;
 }
 .hero-section header .logo-wrapper p {
   font-size: 1.2rem;
   font-weight: 500;
+  color: #fff;
 }
 .hero-section header .login-wrapper {
   display: flex;
   align-items: center;
   font-size: 1.5rem;
   font-weight: 500;
+  color: #fff;
 }
 .hero-section header .login-wrapper span {
   margin-right: 1.3rem;
@@ -154,19 +156,32 @@
     line-height: 40px;
   }
 }
+@media (max-width: 450px) {
+  .hero-section .hero-text {
+    top: 100px;
+    max-width: 100%;
+    left: 20px;
+    right: 10px;
+  }
+  .hero-section .hero-text h3 {
+    font-size: 20px;
+    line-height: 40px;
+  }
+}
 
-main {
+.main {
   border: 1px solid red;
   padding: 2rem 4rem;
   margin-bottom: 3rem;
+  background-color: #fff;
 }
-main .featured-section {
+.main .featured-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.2rem;
 }
-main .featured-section button {
+.main .featured-section button {
   color: #BE123C;
   background: #fff;
   border-width: 0rem;
@@ -175,16 +190,16 @@ main .featured-section button {
   align-items: center;
   justify-content: space-around;
 }
-main .featured-section button #chevron-right-icon {
+.main .featured-section button #chevron-right-icon {
   margin-left: 0.3rem;
 }
-main .card-wrapper {
+.main .card-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 40px;
   padding: 20px 5px;
 }
-main .card-wrapper .card {
+.main .card-wrapper .card {
   border: 1px solid #BE123C;
   border-radius: 8px;
   display: flex;
@@ -193,23 +208,23 @@ main .card-wrapper .card {
   margin-top: 1.5rem;
   background-color: #fff;
 }
-main .card-wrapper .card img {
+.main .card-wrapper .card img {
   max-width: 100%;
   height: 300px;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
 }
-main .card-wrapper .card .movie-detail {
+.main .card-wrapper .card .movie-detail {
   padding: 1rem 0.5rem 1.5rem 0.5rem;
   font-size: 1rem;
 }
-main .card-wrapper .card .movie-detail button {
+.main .card-wrapper .card .movie-detail button {
   height: 30px;
   width: 100%;
   cursor: pointer;
   margin-top: 1rem;
 }
-main .card-wrapper .card #view {
+.main .card-wrapper .card #view {
   padding: 0.3rem;
   border: 1px solid #BE123C;
   position: relative;
@@ -223,10 +238,10 @@ main .card-wrapper .card #view {
   color: #1d3344;
 }
 @media (max-width: 950px) {
-  main {
+  .main {
     padding: 2rem 2rem;
   }
-  main .card-wrapper {
+  .main .card-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
@@ -234,16 +249,20 @@ main .card-wrapper .card #view {
   }
 }
 @media (max-width: 630px) {
-  main .card-wrapper {
+  .main .card-wrapper {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
     padding: 20px 0px;
   }
 }
 @media (max-width: 424px) {
-  main .card-wrapper {
+  .main .card-wrapper {
     grid-template-columns: 1fr;
     grid-gap: 30px;
     padding: 20px 0px;
   }
+}
+
+.active {
+  background-color: #e0c0bd;
 }/*# sourceMappingURL=home.css.map */

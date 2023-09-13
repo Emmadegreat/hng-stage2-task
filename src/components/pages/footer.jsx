@@ -11,16 +11,16 @@ const Footer = (props) => {
             <footer className='footer'>
                 <div className='social-media-links'>
                     <li>
-                        <Link to="facebook"><FaFacebookSquare/></Link>
+                        <Link to="#"><FaFacebookSquare/></Link>
                     </li>
                     <li>
-                        <Link to="instagram"><FaInstagram/></Link>
+                        <Link to="#"><FaInstagram/></Link>
                     </li>
                     <li>
-                        <Link to="twitter"><FaTwitter/></Link>
+                        <Link to="#"><FaTwitter/></Link>
                     </li>
                     <li>
-                        <Link to="youtube"><FaYoutube/></Link>
+                        <Link to="#"><FaYoutube/></Link>
                     </li>
                 </div>
                 <div className='terms-and-conditions'>

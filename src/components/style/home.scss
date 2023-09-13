@@ -18,8 +18,7 @@
         align-items: center;
         text-align: center;
         padding: 0.5rem 4rem;
-        //background-color: yellow;
-        color: #fff;
+        //color: #fff;
         height: 60px;
 
         & .logo-wrapper{
@@ -30,10 +29,12 @@
                 width: 50px;
                 height: 50px;
                 margin-right: 1rem;
+                border-radius: 10%;
             }
             & p{
                 font-size: 1.2rem;
                 font-weight: 500;
+                color: #fff;
             }
         }
         & .login-wrapper{
@@ -41,6 +42,7 @@
             align-items: center;
             font-size: 1.5rem;
             font-weight: 500;
+            color: #fff;
 
             & span{
                 margin-right: 1.3rem;
@@ -170,14 +172,27 @@
             }
         }
     }
+    @media (max-width:450px){
+        .hero-text{
+            top: 100px;
+            max-width: 100%;
+            left: 20px;
+            right: 10px;
+            h3{
+                font-size: 20px;
+                line-height: 40px;
+            }
+        }
+    }
 
 
 }
 
-main{
+.main{
     border: 1px solid red;
     padding: 2rem 4rem;
     margin-bottom: 3rem;
+    background-color: #fff;
 
     & .featured-section{
         display: flex;
@@ -273,5 +288,9 @@ main{
             grid-gap:30px;
             padding: 20px 0px;
         }
+
     }
+}
+.active{
+    background-color: #e0c0bd;
 }
