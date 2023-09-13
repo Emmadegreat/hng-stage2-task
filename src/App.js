@@ -17,6 +17,7 @@ function App() {
             <Route path="/" element={< Home />} />
             <Route path="/movie/:id" element={<Singlepage />} />
           </Routes>
+          <hr style={{color:"#1d3344"}}/>
           <Footer
             copyright="&copy; 2021 MovieBox by Adriana Eka Prayudha"
         />

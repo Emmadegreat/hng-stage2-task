@@ -47,15 +47,42 @@
                 margin-bottom: 2rem;
                 text-decoration: none;
                 cursor: pointer;
-                color: #466074;
+                color: #72777a;
                 font-size: 1rem;
                 font-weight: 600;
+
+                & img{
+                    right: 10px;
+                    position: relative;
+                    top: 10px;
+                }
             }
         }
+
+        & #logout{
+            margin-bottom: -2rem;
+            text-decoration: none;
+            cursor: pointer;
+            color: #72777a;
+            font-size: 1rem;
+            font-weight: 600;
+
+            & img{
+                right: 10px;
+                position: relative;
+                top: 10px;
+            }
+        }
+
         & .down-box{
             display: inherit;
             flex-direction: inherit;
-            border: 1px solid #BE123C;;
+            border: 1px solid #BE123C;
+            border-radius: 1rem;
+            align-items: center;
+            background-color: #f3ecee;
+            padding: 1rem;
+            margin-bottom: 2rem;
 
             & p, small, button{
                 margin-bottom: 1.5rem;
@@ -63,10 +90,11 @@
             & button{
                 width: 130px;
                 height: 30px;
-                border-radius: 01rem;
+                border-radius: 0.4rem;
                 border-width: 0rem;
-                background: #f8e7eb;
+                background: #e7c5cd;
                 color: #BE123C;
+                font-weight: 600;
             }
         }
     }
@@ -112,18 +140,14 @@
 
         & .single-movie{
 
-            & #holder{
-                display: flex;
-                justify-content: space-between;
-                flex-direction: row;
-                font-size: 0.8rem;
-                padding-bottom: 1rem;
-                color: #1d3344;
+            h4, b{
                 line-height: 1.6;
-                font-weight: 600;
+                color: #4c5053;
             }
+
             & p{
                 line-height: 1.6;
+                margin-top: 1rem;
             }
         }
     }

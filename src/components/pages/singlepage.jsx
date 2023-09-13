@@ -5,8 +5,13 @@ import React, {useEffect, useState} from 'react'
 import { FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import calendar_icon from '../images/Calendar.png'
+import home_icon from '../images/Home.png'
 import img37 from '../images/Rectangle 37.png'
 import logo from '../images/tv.png'
+import logout from '../images/Logout.png'
+import movie_show_icon from '../images/Movie Projector.png'
+import tv_icon from '../images/TV Show.png'
 import { useParams } from 'react-router-dom';
 
 const Singlepage = () => {
@@ -49,17 +54,17 @@ const Singlepage = () => {
                         <p>MovieBox</p>
                     </div>
                     <ul>
-                        <Link to="/">Home</Link>
-                        <Link to="#">Movies</Link>
-                        <Link to="#">TV Series</Link>
-                        <Link to="#">Upcoming</Link>
+                        <Link to="/"><img src={home_icon} alt="home" />&nbsp;Home</Link>
+                        <Link to="#"><img src={movie_show_icon} alt="movie show" />&nbsp;Movies</Link>
+                        <Link to="#"><img src={ tv_icon} alt="tv series" />&nbsp;TV Series</Link>
+                        <Link to="#"><img src={calendar_icon} alt="calendar" />&nbsp;Upcoming</Link>
                     </ul>
                     <div className='down-box'>
                         <p>Play movie quizes and earn free tickets</p>
                         <small>50k people are playing now</small>
                         <button>Start playing</button>
                     </div>
-                    <Link to="#">Logout</Link>
+                    <Link to="#" id="logout"><img src={logout} alt="logout" /> Logout</Link>
                 </sidebar>
 
                 <section className='part2'>
@@ -69,12 +74,9 @@ const Singlepage = () => {
                 <section className='part3'>
                    {movieDetail ?(
                     <div className='single-movie' key={movieDetail.id}>
-                        {/*<img src={`https://image.tmdb.org/t/p/w500/${movieDetail.poster_path}`} data-testid="movie-poster" alt={movieDetail.title} />*/}
-                        <div id='holder'>
-                            <span data-testid="movie-title">{ movieDetail.title} . </span>
-                            <span data-testid="movie-release-date">{dateString(movieDetail.release_date)} . </span>{/*utc* runtime in minutes*/}
-                                <span data-testid="movie runtime">{movieDetail.runtime} minutes</span><br />
-                        </div>
+                        <h4 data-testid="movie-title">Title: { movieDetail.title} . </h4>
+                        <b data-testid="movie-release-date">Release date: {dateString(movieDetail.release_date)} . </b>{/*utc* runtime in minutes*/}
+                        <b data-testid="movie runtime">Runtime: {movieDetail.runtime} minutes</b><br />
                         <p data-testid="movie-overview">Overview: {movieDetail.overview}</p> <br />
                     </div>
 
