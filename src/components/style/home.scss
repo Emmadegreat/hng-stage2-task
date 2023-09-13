@@ -155,12 +155,13 @@ main{
         padding: 20px 5px;
 
         & .card{
-            border: 1px solid #BE123C;;
+            border: 1px solid #BE123C;
             border-radius: 8px;
             display: flex;
             flex-direction: column;
             text-align: start;
             margin-top: 1.5rem;
+            background-color: #fff;
             //position: relative;
 
             & img {
@@ -170,7 +171,7 @@ main{
                 border-top-left-radius: 8px;
             }
             & .movie-detail{
-                padding: 1rem 0.5rem 1rem 0.5rem;
+                padding: 1rem 0.5rem 1.5rem 0.5rem;
                 font-size: 1rem;
 
                 & button{
@@ -179,6 +180,19 @@ main{
                     cursor: pointer;
                     margin-top: 1rem;
                 }
+            }
+            & #view{
+                padding: 0.3rem;
+                border: 1px solid #BE123C;
+                position: relative;
+                bottom: 11px;
+                left: 10px;
+                right: -50px;
+                text-align: center;
+                width: 100px;
+                border-radius: 8px;
+                text-decoration: none;
+                color: #1d3344;
             }
         }
     }

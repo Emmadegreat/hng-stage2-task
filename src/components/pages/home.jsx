@@ -26,6 +26,7 @@ const Home = () => {
     const Open = () => setClick(!click);
     const Close = () => setClick(false);
 
+    //api key and url declaration
     const API_KEY = "api_key=7248317da58d3e1b7fe495fc4dd8aaf1";
     const base_url = 'https://api.themoviedb.org/3/movie/top_rated?'
     const url = base_url+API_KEY;
@@ -45,6 +46,7 @@ const Home = () => {
         FetchData()
     }, [])
 
+    //search function mapping
     const searchMovie = (movieList.results).filter((item) => {
         return item.title.toLowerCase().includes(search.toLowerCase())
     })
@@ -113,10 +115,8 @@ const Home = () => {
                                     <div className='movie-detail'>
                                         <h5 data-testid="movie-title">Title: { movie.title}</h5>
                                         <p data-testid="movie-release-date">Release date: {movie.release_date}</p>
-                                        <Link to={`/movie/${movie.id}`} id='view'>View</Link>
                                     </div>
-
-
+                                    <Link to={`/movie/${movie.id}`} id='view'>View</Link>
                                 </div>
                             )
                         })

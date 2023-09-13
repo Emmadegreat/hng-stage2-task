@@ -11,6 +11,7 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas: "part1 part2 part2 part2" "part1 part2 part2 part2" "part1 part3 part3 part3" "part1 part3 part3 part3";
   gap: 2rem;
+  padding-bottom: 4rem;
 }
 .single-page-container .part1 {
   border: 1px solid #BE123C;

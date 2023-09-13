@@ -9,6 +9,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #33363c;
 
     & .social-media-links{
         display: flex;
@@ -20,7 +21,7 @@ footer{
             margin: 0rem 1.2rem;
 
             & a{
-                color: #000;
+                color: #d5d2d2;
                 cursor: pointer;
             }
         }
@@ -35,7 +36,7 @@ footer{
         & p{
             margin: 0rem 1.6rem;
             font-size: 1rem;
-            color: #2e3135;
+            color: #d5d2d2;
         }
     }
     & .copyright{
@@ -50,7 +51,7 @@ footer{
             & p{
                 margin: 0.5rem 1.4rem;
                 font-size: 0.8rem;
-                color: #2e3135;
+                color: #d5d2d2;
             }
         }
         & #copyright{
