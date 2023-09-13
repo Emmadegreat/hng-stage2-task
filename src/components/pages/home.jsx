@@ -26,7 +26,9 @@ const Home = () => {
     const Open = () => setClick(!click);
     const Close = () => setClick(false);
 
-    const url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=7248317da58d3e1b7fe495fc4dd8aaf1';
+    const API_KEY = "api_key=7248317da58d3e1b7fe495fc4dd8aaf1";
+    const base_url = 'https://api.themoviedb.org/3/movie/top_rated?'
+    const url = base_url+API_KEY;
 
     const FetchData = async () => {
 
@@ -109,8 +111,8 @@ const Home = () => {
                                 <div className='card' data-testid="movie-card" key={movie.id}>
                                     <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} data-testid="movie-poster" alt={movie.title} />
                                     <div className='movie-detail'>
-                                        <h5 data-testid="movie-title">Title:{ movie.title}</h5>
-                                        <p data-testid="movie-release-date">Release date:{movie.release_date}</p>
+                                        <h5 data-testid="movie-title">Title: { movie.title}</h5>
+                                        <p data-testid="movie-release-date">Release date: {movie.release_date}</p>
                                         <Link to={`/movie/${movie.id}`} id='view'>View</Link>
                                     </div>
 

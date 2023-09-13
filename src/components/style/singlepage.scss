@@ -3,6 +3,128 @@
 *{
     @include global;
 }
-.single-movie{
-    padding: 4rem;
+.single-page-container{
+    display: grid;
+    grid-template-rows:  1fr 2fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "part1 part2 part2 part2"
+        "part1 part2 part2 part2"
+        "part1 part3 part3 part3"
+        "part1 part3 part3 part3"
+    ;
+    gap: 2rem;
+
+    & .part1{
+        border: 1px solid red;
+        grid-area: part1;
+        padding: 1.5rem 1rem 1.5rem 3rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        & .logo-wrapper{
+            display: flex;
+            align-items: center;
+
+            & img{
+                width: 50px;
+                height: 50px;
+                margin-right: 1rem;
+            }
+            & p{
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+        }
+
+        & ul{
+            display: inherit;
+            flex-direction: inherit;
+            margin: 3rem 0rem;
+
+            & a{
+                margin-bottom: 2rem;
+                text-decoration: none;
+                cursor: pointer;
+                color: #466074;
+                font-size: 1rem;
+                font-weight: 600;
+            }
+        }
+        & .down-box{
+            display: inherit;
+            flex-direction: inherit;
+            border: 1px solid #BE123C;;
+
+            & p, small, button{
+                margin-bottom: 1.5rem;
+            }
+            & button{
+                width: 130px;
+                height: 30px;
+                border-radius: 01rem;
+                border-width: 0rem;
+                background: #f8e7eb;
+                color: #BE123C;
+            }
+        }
+    }
+    & .part2{
+        border: 1px solid green;
+        grid-area: part2;
+        background: url('../images/hero-imgage1.png') no-repeat center center / cover;
+        object-fit: center;
+        place-content: center;
+        place-items: center;
+        height: 60vh;
+        width: 100%;
+    }
+    & .part3{
+        border: 1px solid yellow;
+        grid-area: part3;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 2rem;
+
+        & div{
+            flex-wrap: wrap;
+            display: inherit;
+            flex-direction: column;
+        }
+        & #even{
+            padding-left: 1.5rem;
+            text-align: right;
+
+            & button{
+                width: 100%;
+                margin: 0.5rem 0rem;
+                height: 36px;
+                cursor: pointer;
+                font: 1.1rem;
+                background: #BE123C;
+                border-radius: 0.5rem;
+                color: #fff;
+                outline: none;
+                border: #fff;
+            }
+        }
+
+        & .single-movie{
+
+            & #holder{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                font-size: 0.8rem;
+                padding-bottom: 1rem;
+                color: #1d3344;
+                line-height: 1.6;
+                font-weight: 600;
+            }
+            & p{
+                line-height: 1.6;
+            }
+        }
+    }
 }
