@@ -79,7 +79,7 @@ const Home = () => {
                         </div>
                     </div>
                 </header><br /><br />
-                <div className='text-section'>
+                <div className='hero-text'>
                     <h3>John Wick 3 :<br /> Parabellum</h3>
                     <div className='icon-wrappers'>
                         <div>
