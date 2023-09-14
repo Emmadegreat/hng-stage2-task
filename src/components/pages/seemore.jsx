@@ -1,28 +1,11 @@
 import React, { useEffect, useState } from 'react'
 
-import Card from './card';
-import {FaChevronRight} from 'react-icons/fa';
 import { Link } from 'react-router-dom'
-import apple from '../images/apple.png'
 import axios from 'axios'
-import imdb from '../images/imbd-icon.png'
-import logo from '../images/tv.png';
-import play from '../images/Play.png'
 
 const SeeMore = () => {
 
-
-    /*const getMovie = () => {
-        fetch('https://api.themoviedb.org/3/discover/movie?api_key=7248317da58d3e1b7fe495fc4dd8aaf1')
-            .then(response => response.json())
-            .then(json => console.log(json.results));
-    }
-    getMovie();*/
-
     const [movieList, setMovieList] = useState({ results: [] });
-    const [search, setSearch] = useState("");
-    const [click, setClick] = useState(false);
-    const Open = () => setClick(!click);
 
     //api key and url declaration
     const API_KEY = "api_key=7248317da58d3e1b7fe495fc4dd8aaf1";
