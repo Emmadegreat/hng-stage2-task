@@ -69,8 +69,8 @@ const SeeMore = () => {
                                 style={{width:"250px",height:"250px"}}
                             />
                             <div className='movie-detail'>
-                                <h5 data-testid="movie-title">Title: {movie.title}</h5>
-                                <p data-testid="movie-release-date">Release date: {movie.release_date}</p>
+                                <h5 data-testid="movie-title">{movie.title}</h5>
+                                <p data-testid="movie-release-date">{movie.release_date}</p>
                             </div>
                             <Link to={`/movie/${movie.id}`} id='view'>View</Link>
                         </div>
