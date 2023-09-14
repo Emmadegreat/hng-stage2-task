@@ -48,7 +48,7 @@ const MovieDetailPage = () => {
     return (
         <>
             <section className='single-page-container'>
-                <sidebar className="part1">
+                <sidebar className="side-bar">
                     <div className='logo-wrapper'>
                         <Link to="/"><img src={logo} alt="MovieBox" /></Link>
                         <p>MovieBox</p>
@@ -67,27 +67,40 @@ const MovieDetailPage = () => {
                     <Link to="#" id="logout"><img src={logout} alt="logout" /> Logout</Link>
                 </sidebar>
 
-                <section className='part2'>
 
-                </section>
 
-                <section className='part3'>
-                   {movieDetail ?(
-                    <div className='movie-details' key={movieDetail.id}>
-                        <h4 data-testid="movie-title">Title: { movieDetail.title} . </h4>
-                        <b data-testid="movie-release-date">Release date: {dateString(movieDetail.release_date)} . </b>{/*utc* runtime in minutes*/}
-                        <b data-testid="movie runtime">Runtime: {movieDetail.runtime} minutes</b><br />
-                        <p data-testid="movie-overview">Overview: {movieDetail.overview}</p> <br />
-                    </div>
+                <section className='container'>
+                {movieDetail ? (
+                    <section  className="wrapper">
+                        <div className='wrapper1' key={movieDetail.id}>
+                            <div id='part1' key={movieDetail.id}>
+                                <img src={`https://image.tmdb.org/t/p/w500/${movieDetail.poster_path}`} data-testid="movie-poster" alt={movieDetail.title} />
+                            </div>
 
-                    ) : (<p>...Loading</p>)}
-                    <div id='even'>
-                        <p><FaStar style={{color:"yellow"}}/>&nbsp;8.5|350k</p>
-                        <button>See Showtimes</button>
-                        <button style={{backgroundColor:"#BE123C1A", color:"#000"}}>More watch options</button>
-                        <img src={ img37} alt="group-movie" />
-                    </div>
-                </section>
+                            <section className='detail-container'>
+
+                                <div className='movie-details' id='part2'>
+                                    <h4 data-testid="movie-title">Title: {movieDetail.title} . </h4>
+                                    <b data-testid="movie-release-date">Release date: {dateString(movieDetail.release_date)} . </b>{/*utc* runtime in minutes*/}
+                                    <b data-testid="movie runtime">Runtime: {movieDetail.runtime} minutes</b><br />
+                                    <p data-testid="movie-overview">Overview: {movieDetail.overview}</p> <br />
+                                </div>
+
+                                <div id='part3'>
+                                        <p><FaStar style={{ color: "#e82921" }} />&nbsp; {movieDetail.vote_average} | { movieDetail.vote_count}</p>
+                                    <button>See Showtimes</button>
+                                    <button style={{ backgroundColor: "#BE123C1A", color: "#000" }}>More watch options</button>
+                                    <img src={img37} alt="group-movie" />
+                                </div>
+
+                            </section>
+
+                        </div>
+                        </section>
+
+                    ) : (<p>...Loading</p>)
+
+                }</section>
 
             </section>
 

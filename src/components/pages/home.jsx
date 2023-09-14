@@ -3,6 +3,7 @@ import '../style/home.css';
 import { Link, NavLink } from 'react-router-dom';
 import React,{useEffect, useState} from 'react'
 
+import Card from './card';
 import {FaChevronRight} from 'react-icons/fa';
 import apple from '../images/apple.png'
 import axios from 'axios'
@@ -107,22 +108,7 @@ const Home = () => {
                     <button style={{padding:"0.2rem"}}>See more <FaChevronRight id='chevron-right-icon'/></button>
                 </div>
                 <section className="card-wrapper">
-                    {
-                        (searchMovie).map((movie) => {
-                            return (
-                                <div className='card' data-testid="movie-card" key={movie.id}>
-                                    <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} data-testid="movie-poster" alt={movie.title} />
-                                    <div className='movie-detail'>
-                                        <h5 data-testid="movie-title">Title: { movie.title}</h5>
-                                        <p data-testid="movie-release-date">Release date: {movie.release_date}</p>
-                                    </div>
-                                    <Link to={`/movie/${movie.id}`} id='view'>View</Link>
-                                </div>
-                            )
-                        })
-
-                    }
-
+                    <Card movies={searchMovie} />
                 </section>
 
             </main>
