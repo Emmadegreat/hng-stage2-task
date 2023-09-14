@@ -186,7 +186,6 @@
 }
 
 .main{
-    border: 1px solid red;
     padding: 2rem 4rem;
     margin-bottom: 3rem;
     background-color: #fff;
@@ -201,10 +200,18 @@
             color: #BE123C;
             background: #fff;
             border-width: 0rem;
+            padding: 0.5rem;
             font-size: 1rem;
+            border-radius: 0.5rem;
             display: flex;
+            cursor: pointer;
             align-items: center;
             justify-content: space-around;
+
+            & a{
+                color: #BE123C;
+                text-decoration: none;
+            }
 
             & #chevron-right-icon{
                 margin-left: 0.3rem;

@@ -105,7 +105,10 @@ const Home = () => {
             <main className={click ? 'main active': 'main'}>
                 <div className='featured-section'>
                     <h3>Top Rated Movie</h3>
-                    <button style={{padding:"0.2rem"}}>See more <FaChevronRight id='chevron-right-icon'/></button>
+                    <button>
+                        <Link to="/seemore">See more </Link>
+                        <FaChevronRight id='chevron-right-icon' />
+                    </button>
                 </div>
                 <section className="card-wrapper">
                     <Card movies={searchMovie} />

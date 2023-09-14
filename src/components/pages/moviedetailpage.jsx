@@ -25,11 +25,9 @@ const MovieDetailPage = () => {
     useEffect(() => {
         try {
             const getMovieDetail = async () => {
-                //setLoading(true);
                 const response = await axios.get(url);
                 setMovieDetail(response.data);
                 console.log(response.data);
-                //setLoading(false)
             }
             getMovieDetail()
 
