@@ -1,10 +1,10 @@
 import '../style/home.css';
 
-import { Link, NavLink } from 'react-router-dom';
 import React,{useEffect, useState} from 'react'
 
 import Card from './card';
 import {FaChevronRight} from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import apple from '../images/apple.png'
 import axios from 'axios'
 import imdb from '../images/imbd-icon.png'
@@ -25,7 +25,6 @@ const Home = () => {
     const [search, setSearch] = useState("");
     const [click, setClick] = useState(false);
     const Open = () => setClick(!click);
-    const Close = () => setClick(false);
 
     //api key and url declaration
     const API_KEY = "api_key=7248317da58d3e1b7fe495fc4dd8aaf1";
@@ -39,6 +38,7 @@ const Home = () => {
             setMovieList(resp.data)
             console.log(resp.data.results);
         } catch (error) {
+            alert("Wooops! error")
             console.log(error);
         }
     }
