@@ -68,32 +68,32 @@ const MovieDetailPage = () => {
 
 
                 <section className='container'>
-                {movieDetail ? (
-                    <section  className="wrapper">
-                        <div className='wrapper1' key={movieDetail.id}>
-                            <div id='part1' key={movieDetail.id}>
-                                <img src={`https://image.tmdb.org/t/p/w500/${movieDetail.poster_path}`} data-testid="movie-poster" alt={movieDetail.title} />
-                            </div>
-
-                            <section className='detail-container'>
-
-                                <div className='movie-details' id='part2'>
-                                    <h4 data-testid="movie-title">Title: {movieDetail.title} . </h4>
-                                    <b data-testid="movie-release-date">Release date: {dateString(movieDetail.release_date)} . </b>{/*utc* runtime in minutes*/}
-                                    <b data-testid="movie runtime">Runtime: {movieDetail.runtime} minutes</b><br />
-                                    <p data-testid="movie-overview">Overview: {movieDetail.overview}</p> <br />
+                    {movieDetail ? (
+                        <section  className="wrapper">
+                            <div className='wrapper1' key={movieDetail.id}>
+                                <div id='part1' key={movieDetail.id}>
+                                    <img src={`https://image.tmdb.org/t/p/w500/${movieDetail.poster_path}`} data-testid="movie-poster" alt={movieDetail.title} />
                                 </div>
 
-                                <div id='part3'>
+                                <section className='detail-container'>
+
+                                    <div className='movie-details' id='part2'>
+                                        <h4 data-testid="movie-title">{movieDetail.title} . </h4>
+                                        <b data-testid="movie-release-date">{dateString(movieDetail.release_date)} . </b>{/*utc* runtime in minutes*/}
+                                        <b data-testid="movie-runtime">{movieDetail.runtime}</b><br />
+                                        <p data-testid="movie-overview">{movieDetail.overview}</p> <br />
+                                    </div>
+
+                                    <div id='part3'>
                                         <p><FaStar style={{ color: "#e82921" }} />&nbsp; {movieDetail.vote_average} | { movieDetail.vote_count}</p>
-                                    <button>See Showtimes</button>
-                                    <button style={{ backgroundColor: "#BE123C1A", color: "#000" }}>More watch options</button>
-                                    <img src={img37} alt="group-movie" />
-                                </div>
+                                        <button>See Showtimes</button>
+                                        <button style={{ backgroundColor: "#BE123C1A", color: "#000" }}>More watch options</button>
+                                        <img src={img37} alt="group-movie" />
+                                    </div>
 
-                            </section>
+                                </section>
 
-                        </div>
+                            </div>
                         </section>
 
                     ) : (<p>...Loading</p>)

@@ -10,8 +10,8 @@ const Card = ({movies}) => {
                         <div className='card' data-testid="movie-card" key={movie.id}>
                             <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} data-testid="movie-poster" alt={movie.title} />
                             <div className='movie-detail'>
-                                <h5 data-testid="movie-title">Title: { movie.title}</h5>
-                                <p data-testid="movie-release-date">Release date: {movie.release_date}</p>
+                                <h5 data-testid="movie-title">{ movie.title}</h5>
+                                <p data-testid="movie-release-date">{movie.release_date}</p>
                             </div>
                             <Link to={`/movie/${movie.id}`} id='view'>View</Link>
                         </div>
