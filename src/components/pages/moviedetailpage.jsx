@@ -79,7 +79,7 @@ const MovieDetailPage = () => {
 
                                     <div className='movie-details' id='part2'>
                                         <h4 data-testid="movie-title">{movieDetail.title} . </h4>
-                                        <b data-testid="movie-release-date">{dateString(movieDetail.release_date)} . </b>{/*utc* runtime in minutes*/}
+                                        <b data-testid="movie-release-date">{dateString(movieDetail.release_date)} . </b>
                                         <b data-testid="movie-runtime">{movieDetail.runtime}</b><br />
                                         <p data-testid="movie-overview">{movieDetail.overview}</p> <br />
                                     </div>
